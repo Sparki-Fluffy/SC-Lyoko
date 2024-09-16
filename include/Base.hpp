@@ -1,8 +1,8 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <map>
-#include <nlohmann/json.hpp>
 #include <iostream>
+#include "AssetManager.hpp"
 class Button;
 class Container;
 class Layout;
@@ -36,8 +36,8 @@ protected:
     sf::Vector2f origin;
 
     sf::Sprite sprite;
-    sf::Texture texture;
-    sf::Texture selectedTexture;
+    Asset<sf::Texture>* texture;
+    Asset<sf::Texture>* selectedTexture;
 
     sf::Color color = sf::Color::White;
     sf::Color selectedColor = sf::Color::White;
@@ -52,7 +52,7 @@ protected:
 public:
     Base(std::string name = "", float posX = 0, float posY = 0, float width = 0, float height = 0, 
          sf::Color color = sf::Color::White, sf::Color selectedColor = sf::Color::White,
-         sf::Texture* texture = nullptr, sf::Texture* selectedTexture = nullptr,
+         Asset<sf::Texture>* texture = nullptr, Asset<sf::Texture>* selectedTexture = nullptr,
          float rotation = 0, float originX = 0, float originY = 0);
 
     Base(Base& object) = default;
@@ -99,17 +99,17 @@ public:
 
     void setSelectedColor(sf::Color color);
 
-    void setTexture(sf::Texture& texture);
+    void setTexture(Asset<sf::Texture>* texture);
 
-    void setSelectedTexture(sf::Texture& texture);
+    void setSelectedTexture(Asset<sf::Texture>* texture);
 
     sf::Color& getColor();
 
     sf::Color& getSelectedColor();
 
-    sf::Texture& getTexture();
+    Asset<sf::Texture>* getTexture();
 
-    sf::Texture& getSelectedTexture();
+    Asset<sf::Texture>* getSelectedTexture();
 
     sf::Sprite& getSprite();
 

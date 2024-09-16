@@ -2,6 +2,7 @@
 
 Menu::Menu(std::string name, MenuType menuType, float spacing, float x, float y, float width, float height, sf::Color color, sf::Color selectedColor) : 
     Layout(name, x, y, width, height, color, selectedColor) { 
+    std::cout << "hhhhhhhhhhhhhhh\n";
     setMenuType(menuType);
     setSpace(spacing);
 }

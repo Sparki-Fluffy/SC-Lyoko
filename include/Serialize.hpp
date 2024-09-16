@@ -3,6 +3,7 @@
 #include "Button.hpp"
 #include "Layout.hpp"
 #include "Menu.hpp"
+
 inline void to_json(nlohmann::json& j, const Base& base) {
     j = {
         { "type", base.getType() },
@@ -17,17 +18,10 @@ inline void to_json(nlohmann::json& j, const Base& base) {
         { "color", base.color.toInteger() },
         { "selectedColor", base.selectedColor.toInteger() },
         { "isSelected", base.isSelected },
-        { "hasSelectedTexture", base.hasSelectedTexture }
+        { "hasSelectedTexture", base.hasSelectedTexture },
+        { "texture", base.texture->getName() },
+        { "selectedTexture", base.selectedTexture->getName() }
     };
-
-    //sf::Sprite sprite;
-    //sf::Texture texture;
-    //sf::Texture selectedTexture;
-
-    //Container* parent = nullptr;
-    
-    //Base* previous = nullptr;
-    //Base* next = nullptr;
 }
 
 inline void to_json(nlohmann::json& j, const Button& button) {
@@ -44,6 +38,7 @@ inline void to_json(nlohmann::json& j, const Button& button) {
                     { "textPosY", button.textPosition.y },
                     { "textRelPos", (int)button.textRelativePosition },
                     { "textColor", button.textColor.toInteger() },
+                    { "font", button.font.getName() }
                 }
             );
 }

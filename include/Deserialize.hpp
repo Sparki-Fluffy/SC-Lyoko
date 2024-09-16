@@ -15,20 +15,14 @@ inline void from_json(nlohmann::json j, Base& base) {
     base.origin.x = j["originX"].get<float>();
     base.origin.y = j["originY"].get<float>();
 
-    //sf::Sprite sprite;
-    //sf::Texture texture;
-    //sf::Texture selectedTexture;
+    base.texture = Textures[j["texture"]["name"].get<std::string>()]; 
+    base.selectedTexture = Textures[j["selectedTexture"]["name"].get<std::string>()]; 
 
     base.color = sf::Color(j["color"].get<sf::Uint32>());
     base.selectedColor = sf::Color(j["selectedColor"].get<sf::Uint32>());
 
     base.isSelected = j["isSelected"].get<bool>();
     base.hasSelectedTexture = j["hasSelectedTexture"].get<bool>();
-
-    //Container* parent = nullptr;
-    
-    //Base* previous = nullptr;
-    //Base* next = nullptr;
 }
 
 inline void from_json(nlohmann::json j, Button& button) {
@@ -41,6 +35,7 @@ inline void from_json(nlohmann::json j, Button& button) {
     button.textPosition.y = j["textPosY"].get<float>();
     button.textRelativePosition = j["textRelPos"];
     button.textColor = sf::Color(j["textColor"].get<int>());
+    button.font = *Fonts[j["font"]["name"].get<std::string>()];
 }
 
 inline void from_json(nlohmann::json j, Layout& layout) {
@@ -49,27 +44,27 @@ inline void from_json(nlohmann::json j, Layout& layout) {
         std::string t = child.value()["type"].get<std::string>();
 
         if (t == "Base") {
-            Base b;
-            nlohmann::from_json(child.value(), b);
-            layout.addChild(&b);
+            Base *b = new Base();
+            nlohmann::from_json(child.value(), *b);
+            layout.addChild(b);
         }
             
         else if (t == "Button") {
-            Button b;
-            nlohmann::from_json(child.value(), b);
-            layout.addChild(&b);
+            Button* b = new Button();
+            nlohmann::from_json(child.value(), *b);
+            layout.addChild(b);
         }
 
         else if (t == "Layout") {
-            Layout c;
-            nlohmann::from_json(child.value(), c);
-            layout.addChild(&c);
+            Layout* c = new Layout();
+            nlohmann::from_json(child.value(), *c);
+            layout.addChild(c);
         }
 
         else if (t == "Menu") {
-            Menu m;
-            nlohmann::from_json(child.value(), m);
-            layout.addChild((Layout*)&m);
+            Menu* m = new Menu();
+            nlohmann::from_json(child.value(), *m);
+            layout.addChild(m);
         }
     }
 }

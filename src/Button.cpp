@@ -1,14 +1,14 @@
 #include "../include/Button.hpp"
 
 Button::Button(std::string name, float x, float y, float width, float height,
-               sf::Color color, sf::Color selectedColor, sf::Texture* texture,
-               sf::Texture* selectedTexture, float rotation, float originX,
-               float originY, sf::String text, sf::Font* font, 
+               sf::Color color, sf::Color selectedColor, Asset<sf::Texture>* texture,
+               Asset<sf::Texture>* selectedTexture, float rotation, float originX,
+               float originY, sf::String text, Asset<sf::Font>* font, 
                unsigned int fontSize, sf::Color textColor, relativePosition textPosition) :
         Base(name, x, y, width, height, color, selectedColor,
              texture, selectedTexture, rotation, originX, originY)
 {
-        setText(text, *font, fontSize);
+        setText(text, font, fontSize);
         setTextColor(textColor);
         setTextPosition(textPosition);
 }
@@ -25,9 +25,10 @@ void Button::setTextColor(sf::Color color) {
     textColor = color;
 }
 
-void Button::setText(sf::String text, sf::Font& font, unsigned int size) {
+void Button::setText(sf::String text, Asset<sf::Font>* font, unsigned int size) {
     this->text.setString(text);
-    this->text.setFont(font);
+    this->font = *font;
+    this->text.setFont(this->font.get());
     this->text.setCharacterSize(size);
     this->textSize.x = this->text.getLocalBounds().width;
     this->textSize.y = this->text.getLocalBounds().height;

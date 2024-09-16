@@ -1,14 +1,14 @@
 #include "../include/Base.hpp"
 Base::Base(std::string name, float x, float y, float width, float height, 
-           sf::Color color, sf::Color selectedColor, sf::Texture* texture,
-           sf::Texture* selectedTexture, float rotation, float originX, float originY) {
+           sf::Color color, sf::Color selectedColor, Asset<sf::Texture>* texture,
+           Asset<sf::Texture>* selectedTexture, float rotation, float originX, float originY) {
     setName(name);
     setPosition(x, y);
     setScale(width, height);
     setColor(color);
     setSelectedColor(selectedColor);
-    if (texture != nullptr) setTexture(*texture);
-    if (selectedTexture != nullptr) setSelectedTexture(*selectedTexture);
+    if (texture != nullptr) setTexture(texture);
+    if (selectedTexture != nullptr) setSelectedTexture(selectedTexture);
     setRotation(rotation);
     setOrigin(originX, originY);
 }
@@ -97,11 +97,11 @@ void Base::setSelectedColor(sf::Color color) {
     this->selectedColor = color;
 }
 
-void Base::setTexture(sf::Texture& texture) {
+void Base::setTexture(Asset<sf::Texture>* texture) {
     this->texture = texture;
 }
 
-void Base::setSelectedTexture(sf::Texture& texture) {
+void Base::setSelectedTexture(Asset<sf::Texture>* texture) {
     this->selectedTexture = texture;
 }
 
@@ -113,11 +113,11 @@ sf::Color& Base::getSelectedColor() {
     return selectedColor;
 }
 
-sf::Texture& Base::getTexture() {
+Asset<sf::Texture>* Base::getTexture() {
     return texture;
 }
 
-sf::Texture& Base::getSelectedTexture() {
+Asset<sf::Texture>* Base::getSelectedTexture() {
     return selectedTexture;
 }
 
@@ -150,15 +150,16 @@ void Base::draw(sf::RenderWindow& window) {
     sprite.setRotation(rotation);
     sprite.setOrigin(origin);
 
-    if (!isSelected) {
+            std::cout << "gggggg\n";
+    
         sprite.setColor(color);
-        sprite.setTexture(texture);
-    }
+        sprite.setTexture(texture->get());
+    /*
     else {
-        if (hasSelectedTexture) sprite.setTexture(selectedTexture);
-        else sprite.setTexture(texture);
+        if (hasSelectedTexture) sprite.setTexture(*selectedTexture.get());
+        else sprite.setTexture(*texture.get());
         sprite.setColor(selectedColor);
-    }
+    }*/
     sprite.setTextureRect(sf::IntRect(0, 0, size.x, size.y));
 
     window.draw(sprite);
