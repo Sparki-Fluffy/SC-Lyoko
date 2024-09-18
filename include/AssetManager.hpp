@@ -5,44 +5,46 @@
 #include <nlohmann/json.hpp>
 
 template <typename T>
-class Asset : T {
+class Asset : public T
+{
     template <typename U> friend class AssetManager;
 private:
     std::string name;
     std::filesystem::path filepath;
-    T resource;
 
 public:
-    Asset() {
+    Asset()
+    {
         this->name = "";
         this->filepath = ".";
     }
 
-    Asset(std::filesystem::path path) {
+    Asset(std::filesystem::path path)
+    {
         loadFromFile(path);
     }
 
-    void loadFromFile(std::filesystem::path path) {
+    void loadFromFile(std::filesystem::path path)
+    {
         this->name = path.stem().string();
         this->filepath = path;
-        this->resource.loadFromFile(path.string());
+        T::loadFromFile(path.string());
     }
 
-    T& get() {
-        return resource;
-    }
-
-    std::string getName() const {
+    std::string getName() const
+    {
         return name;
     }
 
-    std::filesystem::path getPath() const {
+    std::filesystem::path getPath() const
+    {
         return filepath;
     }
 };
 
 template <typename T>
-class AssetManager {
+class AssetManager
+{
 private:
     std::string path = "../resource/";
     std::vector<Asset<T>> resources;
@@ -50,46 +52,57 @@ private:
 public:
     static std::vector<std::string> extensions;
 
-    AssetManager() {
+    AssetManager()
+    {
         std::filesystem::path p = path;
         std::filesystem::recursive_directory_iterator dirIter(path);
 
-        for (auto& entry : dirIter) {
-            for (auto& ext : extensions) {
+        for (auto& entry : dirIter)
+        {
+            for (auto& ext : extensions)
+            {
                 if (entry.path().extension() == ext) add(entry.path());
             }
             
         }
     }
     
-    void add(std::filesystem::path path) {
-        Asset<T>* asset = new Asset<T>();
-        asset->loadFromFile(path);
-        resources.push_back(*asset);
+    void add(std::filesystem::path path)
+    {
+        Asset<T>&& asset = Asset<T>();
+        asset.loadFromFile(path);
+        resources.push_back(asset);
     }
 
-    Asset<T>* get(std::string name) {
-        for (auto& res : resources) {
-            if (res.name == name) {
-                return &res;
+    Asset<T>& get(std::string name)
+    {
+        for (auto& res : resources)
+        {
+            if (res.name == name)
+            {
+                return res;
             }   
         }
-        return new Asset<T>();
+        return *(new Asset<T>());
     }
 
-    Asset<T>* operator[](unsigned int idx) {
+    Asset<T>& operator[](unsigned int idx)
+    {
         return resources[idx];
     }
 
-    const Asset<T>* operator[](unsigned int idx) const {
+    const Asset<T>& operator[](unsigned int idx) const
+    {
         return resources[idx];
     }
 
-    Asset<T>* operator[](std::string name) {
+    Asset<T>& operator[](std::string name)
+    {
         return get(name);
     }
 
-    const Asset<T>* operator[](std::string name) const {
+    const Asset<T>& operator[](std::string name) const
+    {
         return get(name);
     }
 };

@@ -13,26 +13,32 @@ std::string Layout::getType() const
     return "Layout";
 }
 
-void Layout::addChild(Base* object) {
+void Layout::addChild(Base* object)
+{
     object->parent = this;
-    if (firstChild == nullptr) {
+    if (firstChild == nullptr)
+    {
         firstChild = object;
         lastChild = object;
     }
-    else {
+    else
+    {
         lastChild->next = object;
         object->previous = lastChild;
         lastChild = object;
     }
 }
 
-void Layout::setSelected(Base* object) {
+void Layout::setSelected(Base* object)
+{
     std::string tname = "";
     std::string type = selected->getType();
     Layout* s;
-    if (type == "Layout" || type == "Layout" || type == "Menu") {
+    if (type == "Layout" || type == "Layout" || type == "Menu")
+    {
         s = (Layout*)selected;
-        if (s->getSelected() != nullptr) {
+        if (s->getSelected() != nullptr)
+        {
             std::cout << (long long)s->selected << "\n";
             std::cout << "sssssss " << selected->getName() << "\n";
             tname = s->getSelected()->getName();
@@ -44,27 +50,33 @@ void Layout::setSelected(Base* object) {
     selected = object;
     selected->select();
 
-    if (tname != "") {
+    if (tname != "")
+    {
         s = (Layout*)selected;
         s->getChild<Base>(tname)->select();
     }
 }
 
-Base* Layout::getSelected() {
+Base* Layout::getSelected()
+{
     return selected;
 }
 
-void Layout::draw(sf::RenderWindow& window) {
+void Layout::draw(sf::RenderWindow& window)
+{
     Base::draw(window);
 
-    for (Base* object = firstChild; object != nullptr; object = object->next) {
+    for (Base* object = firstChild; object != nullptr; object = object->next)
+    {
         if (object->isSelected) selected = object;
         object->draw(window);
     }
 }
 
-void Layout::onEvent(sf::Event& event) {
-    if (selected != nullptr) {
+void Layout::onEvent(sf::Event& event)
+{
+    if (selected != nullptr)
+    {
         selected->onEvent(event);
         switch (event.type)
         {
@@ -80,7 +92,8 @@ void Layout::onEvent(sf::Event& event) {
     }
 }
 
-void Layout::onKeyPressed(sf::Event::KeyEvent& key) {
+void Layout::onKeyPressed(sf::Event::KeyEvent& key)
+{
     if (selected->next != nullptr && (key.code == Controls["MoveUp"].first ||
                                       key.code == Controls["MoveUp"].second ||
                                       key.code == Controls["MoveRight"].first ||
@@ -98,6 +111,7 @@ void Layout::onKeyPressed(sf::Event::KeyEvent& key) {
     }
 }
 
-void Layout::onKeyReleased(sf::Event::KeyEvent& key) {
+void Layout::onKeyReleased(sf::Event::KeyEvent& key)
+{
 
 }

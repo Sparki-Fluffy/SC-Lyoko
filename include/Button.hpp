@@ -2,7 +2,8 @@
 #include <functional>
 #include "Base.hpp"
 
-class Button : public Base {
+class Button : public Base
+{
     friend void to_json(nlohmann::json& j, const Button& button);
     friend void from_json(nlohmann::json j, Button& button);
     sf::Text text;
@@ -30,7 +31,7 @@ public:
 
     void setTextColor(sf::Color color);
 
-    void setText(sf::String text, Asset<sf::Font>* font, unsigned int size);
+    void setText(sf::String text, Asset<sf::Font>& font, unsigned int size);
 
     void setText(sf::Text text);
 

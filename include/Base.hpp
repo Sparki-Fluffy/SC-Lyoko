@@ -36,8 +36,8 @@ protected:
     sf::Vector2f origin;
 
     sf::Sprite sprite;
-    Asset<sf::Texture>* texture;
-    Asset<sf::Texture>* selectedTexture;
+    Asset<sf::Texture> texture;
+    Asset<sf::Texture> selectedTexture;
 
     sf::Color color = sf::Color::White;
     sf::Color selectedColor = sf::Color::White;
@@ -99,17 +99,17 @@ public:
 
     void setSelectedColor(sf::Color color);
 
-    void setTexture(Asset<sf::Texture>* texture);
+    void setTexture(Asset<sf::Texture>& texture);
 
-    void setSelectedTexture(Asset<sf::Texture>* texture);
+    void setSelectedTexture(Asset<sf::Texture>& texture);
 
     sf::Color& getColor();
 
     sf::Color& getSelectedColor();
 
-    Asset<sf::Texture>* getTexture();
+    Asset<sf::Texture>& getTexture();
 
-    Asset<sf::Texture>* getSelectedTexture();
+    Asset<sf::Texture>& getSelectedTexture();
 
     sf::Sprite& getSprite();
 

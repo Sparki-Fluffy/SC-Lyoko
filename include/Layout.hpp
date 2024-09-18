@@ -2,7 +2,8 @@
 #include "Base.hpp"
 //#include "Container.hpp"
 
-class Layout : public Base {
+class Layout : public Base
+{
     friend class Base;
     friend void to_json(nlohmann::json& j, const Layout& cont);
     friend void from_json(nlohmann::json j, Layout& cont);
@@ -22,8 +23,10 @@ public:
     virtual Base* getSelected();
     
     template <typename T>
-    T* getChild(std::string name) {
-        for (Base* object = firstChild; object != nullptr; object = object->next) {
+    T* getChild(std::string name)
+    {
+        for (Base* object = firstChild; object != nullptr; object = object->next)
+        {
             if (object->name == name) return (T*)object;
         }
         return 0;

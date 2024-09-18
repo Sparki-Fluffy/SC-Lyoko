@@ -19,8 +19,8 @@ inline void to_json(nlohmann::json& j, const Base& base) {
         { "selectedColor", base.selectedColor.toInteger() },
         { "isSelected", base.isSelected },
         { "hasSelectedTexture", base.hasSelectedTexture },
-        { "texture", base.texture->getName() },
-        { "selectedTexture", base.selectedTexture->getName() }
+        { "texture", base.texture.getName() },
+        { "selectedTexture", base.selectedTexture.getName() }
     };
 }
 
