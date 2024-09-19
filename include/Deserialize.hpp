@@ -6,7 +6,7 @@
 inline void from_json(nlohmann::json j, Base& base)
 {
     base.name = j["name"].get<std::string>();
-
+    std::cout << base.name << "\n";
     base.position.x = j["posX"].get<float>();
     base.position.y = j["posY"].get<float>();
 
@@ -43,7 +43,11 @@ inline void from_json(nlohmann::json j, Button& button)
     button.textRelativePosition = j["textRelPos"];
     button.textColor = sf::Color(j["textColor"].get<int>());
     std::string s = j["font"].get<std::string>();
-    if (s != "") button.font = Fonts[s];
+    if (s != "")
+    {
+        button.font = Fonts[s];
+        button.text.setFont(button.font);
+    }
 }
 
 inline void from_json(nlohmann::json j, Layout& layout)

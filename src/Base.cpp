@@ -185,7 +185,6 @@ void Base::draw(sf::RenderWindow& window)
     sprite.setRotation(rotation);
     sprite.setOrigin(origin);
 
-            std::cout << "gggggg\n";
     if (!isSelected)
     {
         sprite.setColor(color);

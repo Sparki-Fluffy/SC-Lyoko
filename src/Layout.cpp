@@ -39,8 +39,6 @@ void Layout::setSelected(Base* object)
         s = (Layout*)selected;
         if (s->getSelected() != nullptr)
         {
-            std::cout << (long long)s->selected << "\n";
-            std::cout << "sssssss " << selected->getName() << "\n";
             tname = s->getSelected()->getName();
         }
         s->getSelected()->deselect();

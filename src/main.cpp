@@ -1,13 +1,13 @@
 // Main file
 #include "../include/LyokoInterface.hpp"
 
-int main()
+Scene* makeScene(App& app)
 {
-    App mainApp;
-    /*Asset<sf::Font> font = Fonts["gun4f"];
+    
+    Asset<sf::Font> font = Fonts["gun4f"];
     Asset<sf::Texture> texture = Textures[1];
 
-    Menu cont
+    Menu* cont = new Menu
     (
         "Menu", VMenu, 100, 0, 0,
         texture.getSize().x * 5 + 400,
@@ -21,7 +21,7 @@ int main()
             texture.getSize().x * 5 + 400,
             texture.getSize().y, sf::Color::Red
         );
-        cont.addChild(m);
+        cont->addChild(m);
         for (int j = 0; j < 5; j++)
         {
             m->addChild(new Button
@@ -35,15 +35,25 @@ int main()
                     Center
                 )
             );
-            m->getChild<Button>("Button cont " + std::to_string(j))->setFunction(std::bind(&App::close, &mainApp));
+            m->getChild<Button>("Button cont " + std::to_string(j))->setFunction(std::bind(&App::close, &app));
         }
     }
-    cont.select();
-    cont.getChild<Menu>("Submenu 1")->select();
-    cont.getChild<Menu>("Submenu 1")->getChild<Button>("Button cont 0")->select();*/
+    cont->select();
+    cont->getChild<Menu>("Submenu 1")->select();
+    cont->getChild<Menu>("Submenu 1")->getChild<Button>("Button cont 0")->select();
+    Scene* scene = new Scene("Out");
+    scene->addChild(cont);
+
+    return scene;
+}
+
+int main()
+{
+    App mainApp;
     Scene scene("Out");
+    
     scene.loadFromFile("../scenes/out.json");
-    //scene.addChild(&cont);
+    //scene = *makeScene(mainApp);
     //scene.saveToFile("../scenes/out.json");
     mainApp.setScene(scene);
     mainApp.run();

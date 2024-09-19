@@ -8,9 +8,9 @@ Button::Button(std::string name, float x, float y, float width, float height,
         Base(name, x, y, width, height, color, selectedColor,
              texture, selectedTexture, rotation, originX, originY)
 {
-        setText(text, *font, fontSize);
-        setTextColor(textColor);
-        setTextPosition(textPosition);
+    if (font != nullptr) setText(text, *font, fontSize);
+    setTextColor(textColor);
+    setTextPosition(textPosition);
 }
 
 std::string Button::getType() const
