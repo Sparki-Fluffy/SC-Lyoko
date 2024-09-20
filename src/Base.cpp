@@ -19,21 +19,6 @@ void Base::setName(std::string name)
     this->name = name;
 }
 
-void Base::setParent(Layout* object)
-{
-    this->parent = object;
-}
-
-void Base::setNext(Base* object)
-{
-    this->next = object;
-}
-
-void Base::setPrevious(Base* object)
-{
-    this->previous = object;
-}
-
 void Base::setPosition(sf::Vector2f position)
 {
     this->position = position;
@@ -177,6 +162,24 @@ void Base::select()
 void Base::deselect()
 {
     isSelected = false;
+}
+
+void Base::selectNext()
+{
+    if (previous != nullptr)
+    {
+        deselect();
+        next->select();
+    }
+}
+
+void Base::selectPrev()
+{
+    if (previous != nullptr)
+    {
+        deselect();
+        previous->select();
+    }
 }
 
 void Base::draw(sf::RenderWindow& window)

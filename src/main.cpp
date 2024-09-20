@@ -1,7 +1,7 @@
 // Main file
 #include "../include/LyokoInterface.hpp"
 
-Scene* makeScene(App& app)
+Scene& makeScene(App& app)
 {
     
     Asset<sf::Font> font = Fonts["gun4f"];
@@ -21,10 +21,10 @@ Scene* makeScene(App& app)
             texture.getSize().x * 5 + 400,
             texture.getSize().y, sf::Color::Red
         );
-        cont->addChild(m);
+        cont->add(m);
         for (int j = 0; j < 5; j++)
         {
-            m->addChild(new Button
+            m->add(new Button
                 (
                     "Button cont " + std::to_string(j), 0, 100 * i,
                     texture.getSize().x, texture.getSize().y,
@@ -35,16 +35,14 @@ Scene* makeScene(App& app)
                     Center
                 )
             );
-            m->getChild<Button>("Button cont " + std::to_string(j))->setFunction(std::bind(&App::close, &app));
+            m->get<Button>(j)->setFunction(std::bind(&App::close, &app));
         }
     }
     cont->select();
-    cont->getChild<Menu>("Submenu 1")->select();
-    cont->getChild<Menu>("Submenu 1")->getChild<Button>("Button cont 0")->select();
     Scene* scene = new Scene("Out");
-    scene->addChild(cont);
+    scene->add(cont);
 
-    return scene;
+    return *scene;
 }
 
 int main()
@@ -52,9 +50,9 @@ int main()
     App mainApp;
     Scene scene("Out");
     
-    scene.loadFromFile("../scenes/out.json");
-    //scene = *makeScene(mainApp);
-    //scene.saveToFile("../scenes/out.json");
+    //scene.loadFromFile("../scenes/out.json");
+    scene = makeScene(mainApp);
+    scene.saveToFile("../scenes/out.json");
     mainApp.setScene(scene);
     mainApp.run();
 	return 0;

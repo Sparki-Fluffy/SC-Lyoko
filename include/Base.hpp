@@ -59,12 +59,6 @@ public:
 
     void setName(std::string name);
 
-    void setParent(Layout* object);
-
-    void setNext(Base* object);
-
-    void setPrevious(Base* object);
-
     void setPosition(sf::Vector2f position);
 
     void setPosition(float x, float y);
@@ -122,6 +116,10 @@ public:
     virtual void select();
 
     virtual void deselect();
+
+    virtual void selectNext();
+
+    virtual void selectPrev();
 
     virtual void draw(sf::RenderWindow& window);
 

@@ -61,28 +61,28 @@ inline void from_json(nlohmann::json j, Layout& layout)
         {
             Base *b = new Base();
             nlohmann::from_json(child.value(), *b);
-            layout.addChild(b);
+            layout.add(b);
         }
             
         else if (t == "Button")
         {
             Button* b = new Button();
             nlohmann::from_json(child.value(), *b);
-            layout.addChild(b);
+            layout.add(b);
         }
 
         else if (t == "Layout")
         {
             Layout* c = new Layout();
             nlohmann::from_json(child.value(), *c);
-            layout.addChild(c);
+            layout.add(c);
         }
 
         else if (t == "Menu")
         {
             Menu* m = new Menu();
             nlohmann::from_json(child.value(), *m);
-            layout.addChild(m);
+            layout.add(m);
         }
     }
 }

@@ -16,14 +16,14 @@ public:
 
     std::string getType() const;
 
-    virtual void addChild(Base* object);
+    virtual void add(Base* object);
 
     virtual void setSelected(Base* object);
 
     virtual Base* getSelected();
     
     template <typename T>
-    T* getChild(std::string name)
+    T* get(std::string name)
     {
         for (Base* object = firstChild; object != nullptr; object = object->next)
         {
@@ -31,6 +31,30 @@ public:
         }
         return 0;
     }
+
+    template <typename T>
+    T* get(unsigned int index)
+    {
+        unsigned int i = 0;
+        Base* object = firstChild;
+        while (i < index && object->next != nullptr)
+        {
+            object = object->next;
+        }
+        return (T*)object;
+    }
+
+    Base* get(std::string name);
+
+    Base* get(unsigned int index);
+
+    virtual void select();
+
+    virtual void deselect();
+
+    virtual void selectNext();
+
+    virtual void selectPrev();
 
     virtual void draw(sf::RenderWindow& window);
 
