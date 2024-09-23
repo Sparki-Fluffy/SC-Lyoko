@@ -166,10 +166,11 @@ void Base::deselect()
 
 void Base::selectNext()
 {
-    if (previous != nullptr)
+    if (next != nullptr)
     {
         deselect();
         next->select();
+        std::cout << "this " << name << " " << isSelected << "\nnext " << next->name << " " << next->isSelected << "\n";
     }
 }
 

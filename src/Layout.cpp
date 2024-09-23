@@ -80,16 +80,17 @@ void Layout::deselect()
 {
     Base::deselect();
     selected->deselect();
+    selected = nullptr;
 }
 
 void Layout::selectNext()
 {
-    Base::selectNext();
+    selected->selectNext();
 }
 
 void Layout::selectPrev()
 {
-    Base::selectPrev();
+    selected->selectPrev();
 }
 
 void Layout::draw(sf::RenderWindow& window)

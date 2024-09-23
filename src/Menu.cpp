@@ -39,14 +39,15 @@ float Menu::getSpace()
 
 void Menu::onKeyPressed(sf::Event::KeyEvent& key)
 {
+    std::cout << moveNext.first << " " << movePrev.first << "\n";
     if (selected->next != nullptr && (key.code == moveNext.first || key.code == moveNext.second))
     {
-        setSelected(selected->next);
+        selectNext();
     }
 
     else if (selected->previous != nullptr && (key.code == movePrev.first || key.code == movePrev.second))
     {
-        setSelected(selected->previous);
+        selectPrev();
     }
 }
 
