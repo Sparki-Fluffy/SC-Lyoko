@@ -2,10 +2,12 @@
 #include <functional>
 #include "Base.hpp"
 
-class Button : public Base {
+class Button : public Base
+{
     friend void to_json(nlohmann::json& j, const Button& button);
     friend void from_json(nlohmann::json j, Button& button);
     sf::Text text;
+    Asset<sf::Font> font;
     sf::Vector2f textPosition;
     sf::Vector2f textSize;
 
@@ -16,9 +18,9 @@ class Button : public Base {
 public:
     Button(std::string name = "", float x = 0, float y = 0, float width = 0, float height = 0, 
            sf::Color color = sf::Color::White, sf::Color selectedColor = sf::Color::White,
-           sf::Texture* texture = nullptr, sf::Texture* selectedTexture = nullptr,
+           Asset<sf::Texture>* texture = nullptr, Asset<sf::Texture>* selectedTexture = nullptr,
            float rotation = 0, float originX = 0, float originY = 0, sf::String text = "",
-           sf::Font* font = nullptr, unsigned int fontSize = 0, 
+           Asset<sf::Font>* font = nullptr, unsigned int fontSize = 0, 
            sf::Color textColor = sf::Color::White, relativePosition textPosition = Center);
 
     Button(Button& object) = default;
@@ -29,7 +31,7 @@ public:
 
     void setTextColor(sf::Color color);
 
-    void setText(sf::String text, sf::Font& font, unsigned int size);
+    void setText(sf::String text, Asset<sf::Font>& font, unsigned int size);
 
     void setText(sf::Text text);
 

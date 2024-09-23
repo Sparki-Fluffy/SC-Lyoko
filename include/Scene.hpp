@@ -3,7 +3,8 @@
 #include "Serialize.hpp"
 #include "Deserialize.hpp"
 
-class Scene : public Layout {
+class Scene : public Layout
+{
 public:
     Scene(std::string name = "");
 

@@ -1,7 +1,8 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Scene.hpp"
-class App {
+class App
+{
 private:
     sf::RenderWindow window;
     Scene scene;

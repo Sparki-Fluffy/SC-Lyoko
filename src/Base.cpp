@@ -1,7 +1,8 @@
 #include "../include/Base.hpp"
 Base::Base(std::string name, float x, float y, float width, float height, 
-           sf::Color color, sf::Color selectedColor, sf::Texture* texture,
-           sf::Texture* selectedTexture, float rotation, float originX, float originY) {
+           sf::Color color, sf::Color selectedColor, Asset<sf::Texture>* texture,
+           Asset<sf::Texture>* selectedTexture, float rotation, float originX, float originY)
+{
     setName(name);
     setPosition(x, y);
     setScale(width, height);
@@ -13,148 +14,188 @@ Base::Base(std::string name, float x, float y, float width, float height,
     setOrigin(originX, originY);
 }
 
-void Base::setName(std::string name) {
+void Base::setName(std::string name)
+{
     this->name = name;
 }
 
-void Base::setParent(Layout* object) {
-    this->parent = object;
-}
-
-void Base::setNext(Base* object) {
-    this->next = object;
-}
-
-void Base::setPrevious(Base* object) {
-    this->previous = object;
-}
-
-void Base::setPosition(sf::Vector2f position) {
+void Base::setPosition(sf::Vector2f position)
+{
     this->position = position;
 }
 
-void Base::setPosition(float x, float y) {
+void Base::setPosition(float x, float y)
+{
     position = sf::Vector2f(x, y);
 }
 
-void Base::setScale(sf::Vector2f factor) {
+void Base::setScale(sf::Vector2f factor)
+{
     this->size = factor;
 }
 
-void Base::setScale(float factorX, float factorY) {
+void Base::setScale(float factorX, float factorY)
+{
     this->size = sf::Vector2f(factorX, factorY);
 }
 
-void Base::setRotation(float angle) {
+void Base::setRotation(float angle)
+{
     this->rotation = angle;
 }
 
-void Base::scale(sf::Vector2f factor) {
+void Base::scale(sf::Vector2f factor)
+{
     setScale(this->size.x * factor.x, this->size.y * factor.y);
 }
 
-void Base::scale(float factorX, float factorY) {
+void Base::scale(float factorX, float factorY)
+{
     setScale(this->size.x * factorX, this->size.y * factorY);
 }
 
-void Base::setOrigin(sf::Vector2f origin) {
+void Base::setOrigin(sf::Vector2f origin)
+{
     this->origin = origin;
 }
 
-void Base::setOrigin(float x, float y) {
+void Base::setOrigin(float x, float y)
+{
     this->origin = sf::Vector2f(x, y);
 }
 
-std::string Base::getType() const {
+std::string Base::getType() const
+{
     return "Base";
 }
 
-std::string Base::getName() {
+std::string Base::getName()
+{
     return name;
 }
 
-sf::Vector2f& Base::getScale() {
+sf::Vector2f& Base::getScale()
+{
     return size;
 }
 
-sf::Vector2f& Base::getPosition() {
+sf::Vector2f& Base::getPosition()
+{
     return position;
 }
 
-float Base::getRotation() {
+float Base::getRotation()
+{
     return rotation;
 }
 
-sf::Vector2f& Base::getOrigin() {
+sf::Vector2f& Base::getOrigin()
+{
     return origin;
 }
 
-void Base::setColor(sf::Color color) {
+void Base::setColor(sf::Color color)
+{
     this->color = color;
 }
 
-void Base::setSelectedColor(sf::Color color) {
+void Base::setSelectedColor(sf::Color color)
+{
     this->selectedColor = color;
 }
 
-void Base::setTexture(sf::Texture& texture) {
+void Base::setTexture(Asset<sf::Texture>& texture)
+{
     this->texture = texture;
 }
 
-void Base::setSelectedTexture(sf::Texture& texture) {
+void Base::setSelectedTexture(Asset<sf::Texture>& texture)
+{
     this->selectedTexture = texture;
 }
 
-sf::Color& Base::getColor() {
+sf::Color& Base::getColor()
+{
     return color;
 }
 
-sf::Color& Base::getSelectedColor() {
+sf::Color& Base::getSelectedColor()
+{
     return selectedColor;
 }
 
-sf::Texture& Base::getTexture() {
+Asset<sf::Texture>& Base::getTexture()
+{
     return texture;
 }
 
-sf::Texture& Base::getSelectedTexture() {
+Asset<sf::Texture>& Base::getSelectedTexture()
+{
     return selectedTexture;
 }
 
-sf::Sprite& Base::getSprite() {
+sf::Sprite& Base::getSprite()
+{
     return sprite;
 }
 
-void Base::move(sf::Vector2f offset) {
+void Base::move(sf::Vector2f offset)
+{
     setPosition(this->position + offset);
 }
 
-void Base::move(float offsetX, float offsetY) {
+void Base::move(float offsetX, float offsetY)
+{
     setPosition(this->position.x + offsetX, this->position.y + offsetY);
 }
 
-void Base::rotate(float angle) {
+void Base::rotate(float angle)
+{
     setRotation(this->rotation + angle);
 }
 
-void Base::select() {
+void Base::select()
+{
     isSelected = true;
 }
 
-void Base::deselect() {
+void Base::deselect()
+{
     isSelected = false;
 }
 
-void Base::draw(sf::RenderWindow& window) {
+void Base::selectNext()
+{
+    if (next != nullptr)
+    {
+        deselect();
+        next->select();
+        std::cout << "this " << name << " " << isSelected << "\nnext " << next->name << " " << next->isSelected << "\n";
+    }
+}
+
+void Base::selectPrev()
+{
+    if (previous != nullptr)
+    {
+        deselect();
+        previous->select();
+    }
+}
+
+void Base::draw(sf::RenderWindow& window)
+{
     sprite.setPosition(position);
     sprite.setRotation(rotation);
     sprite.setOrigin(origin);
 
-    if (!isSelected) {
+    if (!isSelected)
+    {
         sprite.setColor(color);
         sprite.setTexture(texture);
     }
-    else {
+    else
+    {
         if (hasSelectedTexture) sprite.setTexture(selectedTexture);
         else sprite.setTexture(texture);
         sprite.setColor(selectedColor);
@@ -164,14 +205,17 @@ void Base::draw(sf::RenderWindow& window) {
     window.draw(sprite);
 }
 
-void Base::onEvent(sf::Event& event) {
+void Base::onEvent(sf::Event& event)
+{
 
 }
 
-void Base::onKeyPressed(sf::Event::KeyEvent& key) {
+void Base::onKeyPressed(sf::Event::KeyEvent& key)
+{
 
 }
 
-void Base::onKeyReleased(sf::Event::KeyEvent& key) {
+void Base::onKeyReleased(sf::Event::KeyEvent& key)
+{
 
 }
