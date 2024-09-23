@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblogics.a CMakeFiles/logics.dir/src/App.cpp.o CMakeFiles/logics.dir/src/Base.cpp.o CMakeFiles/logics.dir/src/Button.cpp.o CMakeFiles/logics.dir/src/Container.cpp.o CMakeFiles/logics.dir/src/Layout.cpp.o CMakeFiles/logics.dir/src/Menu.cpp.o CMakeFiles/logics.dir/src/Scene.cpp.o CMakeFiles/logics.dir/src/ResourceManager.cpp.o
+/usr/bin/ranlib liblogics.a

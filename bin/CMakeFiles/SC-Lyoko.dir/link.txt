@@ -1,1 +1,1 @@
-/usr/bin/c++ "CMakeFiles/SC-Lyoko.dir/src/main.cpp.o" "CMakeFiles/SC-Lyoko.dir/src/Menu.cpp.o" "CMakeFiles/SC-Lyoko.dir/src/Scene.cpp.o" "CMakeFiles/SC-Lyoko.dir/src/Layout.cpp.o" "CMakeFiles/SC-Lyoko.dir/src/Button.cpp.o" "CMakeFiles/SC-Lyoko.dir/src/Base.cpp.o" "CMakeFiles/SC-Lyoko.dir/src/App.cpp.o" -o SC-Lyoko 
+/usr/bin/c++ "CMakeFiles/SC-Lyoko.dir/src/main.cpp.o" -o SC-Lyoko  liblogics.a -lSFML 

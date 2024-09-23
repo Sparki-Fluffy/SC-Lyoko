@@ -65,6 +65,26 @@ CMAKE_BINARY_DIR = /home/sparky/Documents/Проекты/SC-Lyoko/bin
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
+	/usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/sparky/Documents/Проекты/SC-Lyoko/bin/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -84,6 +104,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"bin\" \"devel\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,6 +182,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named logics
+
+# Build rule for target.
+logics: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logics
+.PHONY : logics
+
+# fast build rule for target.
+logics/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/build
+.PHONY : logics/fast
+
+#=============================================================================
 # Target rules for targets named SC-Lyoko
 
 # Build rule for target.
@@ -129,12 +207,77 @@ SC-Lyoko/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/build
 .PHONY : SC-Lyoko/fast
 
+#=============================================================================
+# Target rules for targets named sfml-system
+
+# Build rule for target.
+sfml-system: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sfml-system
+.PHONY : sfml-system
+
+# fast build rule for target.
+sfml-system/fast:
+	$(MAKE) $(MAKESILENT) -f SFML/src/SFML/System/CMakeFiles/sfml-system.dir/build.make SFML/src/SFML/System/CMakeFiles/sfml-system.dir/build
+.PHONY : sfml-system/fast
+
+#=============================================================================
+# Target rules for targets named sfml-window
+
+# Build rule for target.
+sfml-window: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sfml-window
+.PHONY : sfml-window
+
+# fast build rule for target.
+sfml-window/fast:
+	$(MAKE) $(MAKESILENT) -f SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/build
+.PHONY : sfml-window/fast
+
+#=============================================================================
+# Target rules for targets named sfml-network
+
+# Build rule for target.
+sfml-network: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sfml-network
+.PHONY : sfml-network
+
+# fast build rule for target.
+sfml-network/fast:
+	$(MAKE) $(MAKESILENT) -f SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/build.make SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/build
+.PHONY : sfml-network/fast
+
+#=============================================================================
+# Target rules for targets named sfml-graphics
+
+# Build rule for target.
+sfml-graphics: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sfml-graphics
+.PHONY : sfml-graphics
+
+# fast build rule for target.
+sfml-graphics/fast:
+	$(MAKE) $(MAKESILENT) -f SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build.make SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build
+.PHONY : sfml-graphics/fast
+
+#=============================================================================
+# Target rules for targets named sfml-audio
+
+# Build rule for target.
+sfml-audio: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sfml-audio
+.PHONY : sfml-audio
+
+# fast build rule for target.
+sfml-audio/fast:
+	$(MAKE) $(MAKESILENT) -f SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
+.PHONY : sfml-audio/fast
+
 src/App.o: src/App.cpp.o
 .PHONY : src/App.o
 
 # target to build an object file
 src/App.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/App.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/App.cpp.o
 .PHONY : src/App.cpp.o
 
 src/App.i: src/App.cpp.i
@@ -142,7 +285,7 @@ src/App.i: src/App.cpp.i
 
 # target to preprocess a source file
 src/App.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/App.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/App.cpp.i
 .PHONY : src/App.cpp.i
 
 src/App.s: src/App.cpp.s
@@ -150,7 +293,7 @@ src/App.s: src/App.cpp.s
 
 # target to generate assembly for a file
 src/App.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/App.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/App.cpp.s
 .PHONY : src/App.cpp.s
 
 src/Base.o: src/Base.cpp.o
@@ -158,7 +301,7 @@ src/Base.o: src/Base.cpp.o
 
 # target to build an object file
 src/Base.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Base.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Base.cpp.o
 .PHONY : src/Base.cpp.o
 
 src/Base.i: src/Base.cpp.i
@@ -166,7 +309,7 @@ src/Base.i: src/Base.cpp.i
 
 # target to preprocess a source file
 src/Base.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Base.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Base.cpp.i
 .PHONY : src/Base.cpp.i
 
 src/Base.s: src/Base.cpp.s
@@ -174,7 +317,7 @@ src/Base.s: src/Base.cpp.s
 
 # target to generate assembly for a file
 src/Base.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Base.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Base.cpp.s
 .PHONY : src/Base.cpp.s
 
 src/Button.o: src/Button.cpp.o
@@ -182,7 +325,7 @@ src/Button.o: src/Button.cpp.o
 
 # target to build an object file
 src/Button.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Button.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Button.cpp.o
 .PHONY : src/Button.cpp.o
 
 src/Button.i: src/Button.cpp.i
@@ -190,7 +333,7 @@ src/Button.i: src/Button.cpp.i
 
 # target to preprocess a source file
 src/Button.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Button.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Button.cpp.i
 .PHONY : src/Button.cpp.i
 
 src/Button.s: src/Button.cpp.s
@@ -198,15 +341,39 @@ src/Button.s: src/Button.cpp.s
 
 # target to generate assembly for a file
 src/Button.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Button.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Button.cpp.s
 .PHONY : src/Button.cpp.s
+
+src/Container.o: src/Container.cpp.o
+.PHONY : src/Container.o
+
+# target to build an object file
+src/Container.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Container.cpp.o
+.PHONY : src/Container.cpp.o
+
+src/Container.i: src/Container.cpp.i
+.PHONY : src/Container.i
+
+# target to preprocess a source file
+src/Container.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Container.cpp.i
+.PHONY : src/Container.cpp.i
+
+src/Container.s: src/Container.cpp.s
+.PHONY : src/Container.s
+
+# target to generate assembly for a file
+src/Container.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Container.cpp.s
+.PHONY : src/Container.cpp.s
 
 src/Layout.o: src/Layout.cpp.o
 .PHONY : src/Layout.o
 
 # target to build an object file
 src/Layout.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Layout.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Layout.cpp.o
 .PHONY : src/Layout.cpp.o
 
 src/Layout.i: src/Layout.cpp.i
@@ -214,7 +381,7 @@ src/Layout.i: src/Layout.cpp.i
 
 # target to preprocess a source file
 src/Layout.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Layout.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Layout.cpp.i
 .PHONY : src/Layout.cpp.i
 
 src/Layout.s: src/Layout.cpp.s
@@ -222,7 +389,7 @@ src/Layout.s: src/Layout.cpp.s
 
 # target to generate assembly for a file
 src/Layout.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Layout.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Layout.cpp.s
 .PHONY : src/Layout.cpp.s
 
 src/Menu.o: src/Menu.cpp.o
@@ -230,7 +397,7 @@ src/Menu.o: src/Menu.cpp.o
 
 # target to build an object file
 src/Menu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Menu.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Menu.cpp.o
 .PHONY : src/Menu.cpp.o
 
 src/Menu.i: src/Menu.cpp.i
@@ -238,7 +405,7 @@ src/Menu.i: src/Menu.cpp.i
 
 # target to preprocess a source file
 src/Menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Menu.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Menu.cpp.i
 .PHONY : src/Menu.cpp.i
 
 src/Menu.s: src/Menu.cpp.s
@@ -246,15 +413,39 @@ src/Menu.s: src/Menu.cpp.s
 
 # target to generate assembly for a file
 src/Menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Menu.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Menu.cpp.s
 .PHONY : src/Menu.cpp.s
+
+src/ResourceManager.o: src/ResourceManager.cpp.o
+.PHONY : src/ResourceManager.o
+
+# target to build an object file
+src/ResourceManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/ResourceManager.cpp.o
+.PHONY : src/ResourceManager.cpp.o
+
+src/ResourceManager.i: src/ResourceManager.cpp.i
+.PHONY : src/ResourceManager.i
+
+# target to preprocess a source file
+src/ResourceManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/ResourceManager.cpp.i
+.PHONY : src/ResourceManager.cpp.i
+
+src/ResourceManager.s: src/ResourceManager.cpp.s
+.PHONY : src/ResourceManager.s
+
+# target to generate assembly for a file
+src/ResourceManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/ResourceManager.cpp.s
+.PHONY : src/ResourceManager.cpp.s
 
 src/Scene.o: src/Scene.cpp.o
 .PHONY : src/Scene.o
 
 # target to build an object file
 src/Scene.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Scene.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Scene.cpp.o
 .PHONY : src/Scene.cpp.o
 
 src/Scene.i: src/Scene.cpp.i
@@ -262,7 +453,7 @@ src/Scene.i: src/Scene.cpp.i
 
 # target to preprocess a source file
 src/Scene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Scene.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Scene.cpp.i
 .PHONY : src/Scene.cpp.i
 
 src/Scene.s: src/Scene.cpp.s
@@ -270,7 +461,7 @@ src/Scene.s: src/Scene.cpp.s
 
 # target to generate assembly for a file
 src/Scene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SC-Lyoko.dir/build.make CMakeFiles/SC-Lyoko.dir/src/Scene.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logics.dir/build.make CMakeFiles/logics.dir/src/Scene.cpp.s
 .PHONY : src/Scene.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -304,8 +495,20 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... SC-Lyoko"
+	@echo "... logics"
+	@echo "... sfml-audio"
+	@echo "... sfml-graphics"
+	@echo "... sfml-network"
+	@echo "... sfml-system"
+	@echo "... sfml-window"
 	@echo "... src/App.o"
 	@echo "... src/App.i"
 	@echo "... src/App.s"
@@ -315,12 +518,18 @@ help:
 	@echo "... src/Button.o"
 	@echo "... src/Button.i"
 	@echo "... src/Button.s"
+	@echo "... src/Container.o"
+	@echo "... src/Container.i"
+	@echo "... src/Container.s"
 	@echo "... src/Layout.o"
 	@echo "... src/Layout.i"
 	@echo "... src/Layout.s"
 	@echo "... src/Menu.o"
 	@echo "... src/Menu.i"
 	@echo "... src/Menu.s"
+	@echo "... src/ResourceManager.o"
+	@echo "... src/ResourceManager.i"
+	@echo "... src/ResourceManager.s"
 	@echo "... src/Scene.o"
 	@echo "... src/Scene.i"
 	@echo "... src/Scene.s"
