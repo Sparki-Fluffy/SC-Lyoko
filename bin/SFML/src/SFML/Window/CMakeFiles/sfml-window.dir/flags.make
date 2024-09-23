@@ -6,7 +6,7 @@ CXX_DEFINES = -DSFML_WINDOW_EXPORTS
 
 CXX_INCLUDES = -I/home/sparky/Documents/Проекты/SC-Lyoko/include -I/home/sparky/Documents/Проекты/SC-Lyoko/SFML -I/home/sparky/Documents/Проекты/SC-Lyoko/SFML/include -I/home/sparky/Documents/Проекты/SC-Lyoko/SFML/src -I/home/sparky/Documents/Проекты/SC-Lyoko/SFML/extlibs/headers/vulkan -isystem /home/sparky/Documents/Проекты/SC-Lyoko/SFML/extlibs/headers/glad/include
 
-CXX_FLAGS = -fPIC -fvisibility=hidden
+CXX_FLAGS = -fPIC -fvisibility=hidden -std=c++17
 
 # Custom flags: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.o_FLAGS =  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op
 

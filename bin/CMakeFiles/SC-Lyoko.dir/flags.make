@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/sparky/Documents/Проекты/SC-Lyoko/include -I/home/sparky/Documents/Проекты/SC-Lyoko/SFML
 
-CXX_FLAGS = 
+CXX_FLAGS = -std=c++17
 

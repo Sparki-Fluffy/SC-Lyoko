@@ -39,8 +39,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-bGPWcf"
-      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-bGPWcf"
+      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Uch5S6"
+      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Uch5S6"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -49,13 +49,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-bGPWcf'
+        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Uch5S6'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_04b5e/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_04b5e.dir/build.make CMakeFiles/cmTC_04b5e.dir/build
-        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-bGPWcf'
-        Building CXX object CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a7122/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a7122.dir/build.make CMakeFiles/cmTC_a7122.dir/build
+        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Uch5S6'
+        Building CXX object CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=hsa:nvptx-none
@@ -63,8 +63,8 @@ events:
         Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go --enable-offload-targets=hsa,nvptx-none, --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/7 --enable-ssp --disable-libssp --disable-libvtv --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-7 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --build=x86_64-suse-linux --host=x86_64-suse-linux
         Thread model: posix
         gcc version 7.5.0 (SUSE Linux) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         /usr/lib64/gcc/x86_64-suse-linux/7/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccWTkSMZ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /usr/lib64/gcc/x86_64-suse-linux/7/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccMKvTMb.s
         GNU C++14 (SUSE Linux) version 7.5.0 (x86_64-suse-linux)
         	compiled by GNU C version 7.5.0, GMP version 6.1.2, MPFR version 4.0.2-p6, MPC version 1.1.0, isl version isl-0.18-GMP
         
@@ -85,15 +85,15 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: b173113e71986c3d169e65fd129b9b5e
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/as -v --64 -o CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccWTkSMZ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/as -v --64 -o CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccMKvTMb.s
         GNU assembler version 2.43.1 (x86_64-suse-linux) using BFD version (GNU Binutils; SUSE Linux Enterprise 15) 2.43.1.20240828-150100.7.49
         COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/
         LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-        Linking CXX executable cmTC_04b5e
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04b5e.dir/link.txt --verbose=1
-        /usr/bin/c++  -v CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_04b5e 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        Linking CXX executable cmTC_a7122
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7122.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a7122 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper
@@ -104,10 +104,10 @@ events:
         gcc version 7.5.0 (SUSE Linux) 
         COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/
         LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_04b5e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         /usr/lib64/gcc/x86_64-suse-linux/7/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/7/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYH7g3l.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_04b5e /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/7 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/7/../../.. CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-suse-linux/7/crtend.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_04b5e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-bGPWcf'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a7122' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /usr/lib64/gcc/x86_64-suse-linux/7/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/7/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cckINBQs.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a7122 /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/7 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/7/../../.. CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-suse-linux/7/crtend.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a7122' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Uch5S6'
         
       exitCode: 0
   -
@@ -149,13 +149,13 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-bGPWcf']
+        ignore line: [Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Uch5S6']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_04b5e/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_04b5e.dir/build.make CMakeFiles/cmTC_04b5e.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-bGPWcf']
-        ignore line: [Building CXX object CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a7122/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_a7122.dir/build.make CMakeFiles/cmTC_a7122.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Uch5S6']
+        ignore line: [Building CXX object CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=hsa:nvptx-none]
@@ -163,8 +163,8 @@ events:
         ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go --enable-offload-targets=hsa nvptx-none  --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/7 --enable-ssp --disable-libssp --disable-libvtv --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-7 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --build=x86_64-suse-linux --host=x86_64-suse-linux]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 7.5.0 (SUSE Linux) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/7/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccWTkSMZ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/7/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccMKvTMb.s]
         ignore line: [GNU C++14 (SUSE Linux) version 7.5.0 (x86_64-suse-linux)]
         ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.1.2  MPFR version 4.0.2-p6  MPC version 1.1.0  isl version isl-0.18-GMP]
         ignore line: []
@@ -185,16 +185,16 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: b173113e71986c3d169e65fd129b9b5e]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/as -v --64 -o CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccWTkSMZ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/as -v --64 -o CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccMKvTMb.s]
         ignore line: [GNU assembler version 2.43.1 (x86_64-suse-linux) using BFD version (GNU Binutils]
         ignore line: [ SUSE Linux Enterprise 15) 2.43.1.20240828-150100.7.49]
         ignore line: [COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/]
         ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [Linking CXX executable cmTC_04b5e]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04b5e.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_04b5e ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking CXX executable cmTC_a7122]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7122.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a7122 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper]
@@ -205,13 +205,13 @@ events:
         ignore line: [gcc version 7.5.0 (SUSE Linux) ]
         ignore line: [COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/]
         ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_04b5e' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        link line: [ /usr/lib64/gcc/x86_64-suse-linux/7/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/7/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYH7g3l.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_04b5e /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/7 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/7/../../.. CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-suse-linux/7/crtend.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a7122' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        link line: [ /usr/lib64/gcc/x86_64-suse-linux/7/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/7/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cckINBQs.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a7122 /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/7 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/7/../../.. CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-suse-linux/7/crtend.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crtn.o]
           arg [/usr/lib64/gcc/x86_64-suse-linux/7/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib64/gcc/x86_64-suse-linux/7/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccYH7g3l.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cckINBQs.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -224,7 +224,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_04b5e] ==> ignore
+          arg [cmTC_a7122] ==> ignore
           arg [/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o]
           arg [/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o]
           arg [/usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o]
@@ -234,7 +234,7 @@ events:
           arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
           arg [-L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib]
           arg [-L/usr/lib64/gcc/x86_64-suse-linux/7/../../..] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/7/../../..]
-          arg [CMakeFiles/cmTC_04b5e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_a7122.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -290,8 +290,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-ptis5R"
-      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-ptis5R"
+      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-yCk9LV"
+      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-yCk9LV"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -302,13 +302,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-ptis5R'
+        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-yCk9LV'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_97b5e/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_97b5e.dir/build.make CMakeFiles/cmTC_97b5e.dir/build
-        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-ptis5R'
-        Building C object CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_11a61/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_11a61.dir/build.make CMakeFiles/cmTC_11a61.dir/build
+        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-yCk9LV'
+        Building C object CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         OFFLOAD_TARGET_NAMES=hsa:nvptx-none
@@ -316,8 +316,8 @@ events:
         Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go --enable-offload-targets=hsa,nvptx-none, --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/7 --enable-ssp --disable-libssp --disable-libvtv --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-7 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --build=x86_64-suse-linux --host=x86_64-suse-linux
         Thread model: posix
         gcc version 7.5.0 (SUSE Linux) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-         /usr/lib64/gcc/x86_64-suse-linux/7/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccbu8zYR.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         /usr/lib64/gcc/x86_64-suse-linux/7/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccSaEz4U.s
         GNU C11 (SUSE Linux) version 7.5.0 (x86_64-suse-linux)
         	compiled by GNU C version 7.5.0, GMP version 6.1.2, MPFR version 4.0.2-p6, MPC version 1.1.0, isl version isl-0.18-GMP
         
@@ -335,15 +335,15 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: efe3776b8e933ca303d5e2f4002c5910
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-         /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/as -v --64 -o CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o /tmp/ccbu8zYR.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/as -v --64 -o CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o /tmp/ccSaEz4U.s
         GNU assembler version 2.43.1 (x86_64-suse-linux) using BFD version (GNU Binutils; SUSE Linux Enterprise 15) 2.43.1.20240828-150100.7.49
         COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/
         LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-        Linking C executable cmTC_97b5e
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97b5e.dir/link.txt --verbose=1
-        /usr/bin/cc  -v CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o -o cmTC_97b5e 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+        Linking C executable cmTC_11a61
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11a61.dir/link.txt --verbose=1
+        /usr/bin/cc  -v CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o -o cmTC_11a61 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper
@@ -354,10 +354,10 @@ events:
         gcc version 7.5.0 (SUSE Linux) 
         COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/
         LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_97b5e' '-mtune=generic' '-march=x86-64'
-         /usr/lib64/gcc/x86_64-suse-linux/7/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/7/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbbmUbm.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_97b5e /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/7 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/7/../../.. CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib64/gcc/x86_64-suse-linux/7/crtend.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_97b5e' '-mtune=generic' '-march=x86-64'
-        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-ptis5R'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_11a61' '-mtune=generic' '-march=x86-64'
+         /usr/lib64/gcc/x86_64-suse-linux/7/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/7/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNdDy2A.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_11a61 /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/7 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/7/../../.. CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib64/gcc/x86_64-suse-linux/7/crtend.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_11a61' '-mtune=generic' '-march=x86-64'
+        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-yCk9LV'
         
       exitCode: 0
   -
@@ -393,13 +393,13 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-ptis5R']
+        ignore line: [Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-yCk9LV']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_97b5e/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_97b5e.dir/build.make CMakeFiles/cmTC_97b5e.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-ptis5R']
-        ignore line: [Building C object CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_11a61/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_11a61.dir/build.make CMakeFiles/cmTC_11a61.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-yCk9LV']
+        ignore line: [Building C object CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [OFFLOAD_TARGET_NAMES=hsa:nvptx-none]
@@ -407,8 +407,8 @@ events:
         ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go --enable-offload-targets=hsa nvptx-none  --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/7 --enable-ssp --disable-libssp --disable-libvtv --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-7 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --build=x86_64-suse-linux --host=x86_64-suse-linux]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 7.5.0 (SUSE Linux) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/7/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccbu8zYR.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/7/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccSaEz4U.s]
         ignore line: [GNU C11 (SUSE Linux) version 7.5.0 (x86_64-suse-linux)]
         ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.1.2  MPFR version 4.0.2-p6  MPC version 1.1.0  isl version isl-0.18-GMP]
         ignore line: []
@@ -426,16 +426,16 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: efe3776b8e933ca303d5e2f4002c5910]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/as -v --64 -o CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o /tmp/ccbu8zYR.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/as -v --64 -o CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o /tmp/ccSaEz4U.s]
         ignore line: [GNU assembler version 2.43.1 (x86_64-suse-linux) using BFD version (GNU Binutils]
         ignore line: [ SUSE Linux Enterprise 15) 2.43.1.20240828-150100.7.49]
         ignore line: [COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/]
         ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-        ignore line: [Linking C executable cmTC_97b5e]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97b5e.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o -o cmTC_97b5e ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking C executable cmTC_11a61]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11a61.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o -o cmTC_11a61 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper]
@@ -446,13 +446,13 @@ events:
         ignore line: [gcc version 7.5.0 (SUSE Linux) ]
         ignore line: [COMPILER_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/]
         ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/7/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/7/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_97b5e' '-mtune=generic' '-march=x86-64']
-        link line: [ /usr/lib64/gcc/x86_64-suse-linux/7/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/7/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbbmUbm.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_97b5e /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/7 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/7/../../.. CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib64/gcc/x86_64-suse-linux/7/crtend.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_11a61' '-mtune=generic' '-march=x86-64']
+        link line: [ /usr/lib64/gcc/x86_64-suse-linux/7/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/7/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNdDy2A.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_11a61 /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o -L/usr/lib64/gcc/x86_64-suse-linux/7 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/7/../../.. CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib64/gcc/x86_64-suse-linux/7/crtend.o /usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crtn.o]
           arg [/usr/lib64/gcc/x86_64-suse-linux/7/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib64/gcc/x86_64-suse-linux/7/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/7/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccbbmUbm.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccNdDy2A.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -465,7 +465,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_97b5e] ==> ignore
+          arg [cmTC_11a61] ==> ignore
           arg [/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crt1.o]
           arg [/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/7/../../../../lib64/crti.o]
           arg [/usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/7/crtbegin.o]
@@ -475,7 +475,7 @@ events:
           arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
           arg [-L/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/lib]
           arg [-L/usr/lib64/gcc/x86_64-suse-linux/7/../../..] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/7/../../..]
-          arg [CMakeFiles/cmTC_97b5e.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_11a61.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--as-needed] ==> ignore
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -512,8 +512,8 @@ events:
     checks:
       - "Looking for XOpenDisplay in /usr/lib64/libX11.so;/usr/lib64/libXext.so"
     directories:
-      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Gf8MAK"
-      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Gf8MAK"
+      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Dv6CZT"
+      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Dv6CZT"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -525,17 +525,17 @@ events:
       variable: "X11_LIB_X11_SOLO"
       cached: true
       stdout: |
-        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Gf8MAK'
+        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Dv6CZT'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_93ed9/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_93ed9.dir/build.make CMakeFiles/cmTC_93ed9.dir/build
-        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Gf8MAK'
-        Building C object CMakeFiles/cmTC_93ed9.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_93ed9.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Gf8MAK/CheckFunctionExists.c
-        Linking C executable cmTC_93ed9
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93ed9.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_93ed9.dir/CheckFunctionExists.c.o -o cmTC_93ed9  /usr/lib64/libX11.so /usr/lib64/libXext.so 
-        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Gf8MAK'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4a67d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4a67d.dir/build.make CMakeFiles/cmTC_4a67d.dir/build
+        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Dv6CZT'
+        Building C object CMakeFiles/cmTC_4a67d.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_4a67d.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Dv6CZT/CheckFunctionExists.c
+        Linking C executable cmTC_4a67d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a67d.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_4a67d.dir/CheckFunctionExists.c.o -o cmTC_4a67d  /usr/lib64/libX11.so /usr/lib64/libXext.so 
+        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-Dv6CZT'
         
       exitCode: 0
   -
@@ -548,8 +548,8 @@ events:
     checks:
       - "Looking for gethostbyname"
     directories:
-      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xw7T4C"
-      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xw7T4C"
+      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-z4A3z9"
+      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-z4A3z9"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -561,17 +561,17 @@ events:
       variable: "CMAKE_HAVE_GETHOSTBYNAME"
       cached: true
       stdout: |
-        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xw7T4C'
+        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-z4A3z9'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e36ef/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_e36ef.dir/build.make CMakeFiles/cmTC_e36ef.dir/build
-        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xw7T4C'
-        Building C object CMakeFiles/cmTC_e36ef.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_e36ef.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xw7T4C/CheckFunctionExists.c
-        Linking C executable cmTC_e36ef
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e36ef.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_e36ef.dir/CheckFunctionExists.c.o -o cmTC_e36ef 
-        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xw7T4C'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_edd78/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_edd78.dir/build.make CMakeFiles/cmTC_edd78.dir/build
+        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-z4A3z9'
+        Building C object CMakeFiles/cmTC_edd78.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_edd78.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-z4A3z9/CheckFunctionExists.c
+        Linking C executable cmTC_edd78
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edd78.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_edd78.dir/CheckFunctionExists.c.o -o cmTC_edd78 
+        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-z4A3z9'
         
       exitCode: 0
   -
@@ -584,8 +584,8 @@ events:
     checks:
       - "Looking for connect"
     directories:
-      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-t0VzcR"
-      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-t0VzcR"
+      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-mcE2mB"
+      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-mcE2mB"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -597,17 +597,17 @@ events:
       variable: "CMAKE_HAVE_CONNECT"
       cached: true
       stdout: |
-        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-t0VzcR'
+        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-mcE2mB'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_97070/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_97070.dir/build.make CMakeFiles/cmTC_97070.dir/build
-        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-t0VzcR'
-        Building C object CMakeFiles/cmTC_97070.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_97070.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-t0VzcR/CheckFunctionExists.c
-        Linking C executable cmTC_97070
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97070.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_97070.dir/CheckFunctionExists.c.o -o cmTC_97070 
-        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-t0VzcR'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c862a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c862a.dir/build.make CMakeFiles/cmTC_c862a.dir/build
+        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-mcE2mB'
+        Building C object CMakeFiles/cmTC_c862a.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_c862a.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-mcE2mB/CheckFunctionExists.c
+        Linking C executable cmTC_c862a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c862a.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_c862a.dir/CheckFunctionExists.c.o -o cmTC_c862a 
+        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-mcE2mB'
         
       exitCode: 0
   -
@@ -620,8 +620,8 @@ events:
     checks:
       - "Looking for remove"
     directories:
-      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-OpoGqK"
-      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-OpoGqK"
+      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-veO8ot"
+      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-veO8ot"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -633,17 +633,17 @@ events:
       variable: "CMAKE_HAVE_REMOVE"
       cached: true
       stdout: |
-        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-OpoGqK'
+        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-veO8ot'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ef162/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_ef162.dir/build.make CMakeFiles/cmTC_ef162.dir/build
-        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-OpoGqK'
-        Building C object CMakeFiles/cmTC_ef162.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_ef162.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-OpoGqK/CheckFunctionExists.c
-        Linking C executable cmTC_ef162
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef162.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_ef162.dir/CheckFunctionExists.c.o -o cmTC_ef162 
-        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-OpoGqK'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_78998/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_78998.dir/build.make CMakeFiles/cmTC_78998.dir/build
+        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-veO8ot'
+        Building C object CMakeFiles/cmTC_78998.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_78998.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-veO8ot/CheckFunctionExists.c
+        Linking C executable cmTC_78998
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78998.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_78998.dir/CheckFunctionExists.c.o -o cmTC_78998 
+        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-veO8ot'
         
       exitCode: 0
   -
@@ -656,8 +656,8 @@ events:
     checks:
       - "Looking for shmat"
     directories:
-      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-H7FDyc"
-      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-H7FDyc"
+      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xCHYm9"
+      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xCHYm9"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -669,17 +669,17 @@ events:
       variable: "CMAKE_HAVE_SHMAT"
       cached: true
       stdout: |
-        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-H7FDyc'
+        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xCHYm9'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fa15e/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_fa15e.dir/build.make CMakeFiles/cmTC_fa15e.dir/build
-        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-H7FDyc'
-        Building C object CMakeFiles/cmTC_fa15e.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_fa15e.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-H7FDyc/CheckFunctionExists.c
-        Linking C executable cmTC_fa15e
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa15e.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_fa15e.dir/CheckFunctionExists.c.o -o cmTC_fa15e 
-        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-H7FDyc'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d8c26/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d8c26.dir/build.make CMakeFiles/cmTC_d8c26.dir/build
+        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xCHYm9'
+        Building C object CMakeFiles/cmTC_d8c26.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_d8c26.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xCHYm9/CheckFunctionExists.c
+        Linking C executable cmTC_d8c26
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8c26.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_d8c26.dir/CheckFunctionExists.c.o -o cmTC_d8c26 
+        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-xCHYm9'
         
       exitCode: 0
   -
@@ -692,8 +692,8 @@ events:
     checks:
       - "Looking for IceConnectionNumber in ICE"
     directories:
-      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-8fV0Id"
-      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-8fV0Id"
+      source: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-FLkoBb"
+      binary: "/home/sparky/Documents/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-FLkoBb"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -705,17 +705,17 @@ events:
       variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
       cached: true
       stdout: |
-        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-8fV0Id'
+        Change Dir: '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-FLkoBb'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_69065/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_69065.dir/build.make CMakeFiles/cmTC_69065.dir/build
-        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-8fV0Id'
-        Building C object CMakeFiles/cmTC_69065.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_69065.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-8fV0Id/CheckFunctionExists.c
-        Linking C executable cmTC_69065
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69065.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_69065.dir/CheckFunctionExists.c.o -o cmTC_69065  -lICE 
-        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-8fV0Id'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5fcb3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5fcb3.dir/build.make CMakeFiles/cmTC_5fcb3.dir/build
+        gmake[1]: Entering directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-FLkoBb'
+        Building C object CMakeFiles/cmTC_5fcb3.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_5fcb3.dir/CheckFunctionExists.c.o -c /home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-FLkoBb/CheckFunctionExists.c
+        Linking C executable cmTC_5fcb3
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fcb3.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_5fcb3.dir/CheckFunctionExists.c.o -o cmTC_5fcb3  -lICE 
+        gmake[1]: Leaving directory '/home/sparky/Documents/Проекты/SC-Lyoko/bin/CMakeFiles/CMakeScratch/TryCompile-FLkoBb'
         
       exitCode: 0
 ...
