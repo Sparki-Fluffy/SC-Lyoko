@@ -13,99 +13,58 @@ std::string Layout::getType() const
     return "Layout";
 }
 
-void Layout::add(Base* object)
-{
+void Layout::addChild(Base* object) {
     object->parent = this;
-    if (firstChild == nullptr)
-    {
+    if (firstChild == nullptr) {
         firstChild = object;
         lastChild = object;
     }
-    else
-    {
+    else {
         lastChild->next = object;
         object->previous = lastChild;
         lastChild = object;
     }
 }
 
-Base* Layout::get(std::string name)
-{
-    return get<Base>(name);
-}
-
-Base* Layout::get(unsigned int index)
-{
-    return get<Base>(index);
-}
-
-void Layout::setSelected(Base* object)
-{
+void Layout::setSelected(Base* object) {
     std::string tname = "";
     std::string type = selected->getType();
     Layout* s;
-    if (type == "Layout" || type == "Menu")
-    {
+    if (type == "Layout" || type == "Layout" || type == "Menu") {
         s = (Layout*)selected;
-        tname = s->selected->getName();
-        s->selected->deselect();
+        if (s->getSelected() != nullptr) {
+            std::cout << (long long)s->selected << "\n";
+            std::cout << "sssssss " << selected->getName() << "\n";
+            tname = s->getSelected()->getName();
+        }
+        s->getSelected()->deselect();
     }
 
     selected->deselect();
     selected = object;
     selected->select();
 
-    if (tname != "")
-    {
+    if (tname != "") {
         s = (Layout*)selected;
-        s->get(tname)->select();
+        s->getChild<Base>(tname)->select();
     }
 }
 
-Base* Layout::getSelected()
-{
-    if (selected != nullptr)
-        return selected;
-    return new Base();
+Base* Layout::getSelected() {
+    return selected;
 }
 
-void Layout::select()
-{
-    Base::select();
-    firstChild->select();
-    selected = firstChild;
-}
-
-void Layout::deselect()
-{
-    Base::deselect();
-    selected->deselect();
-}
-
-void Layout::selectNext()
-{
-    Base::selectNext();
-}
-
-void Layout::selectPrev()
-{
-    Base::selectPrev();
-}
-
-void Layout::draw(sf::RenderWindow& window)
-{
+void Layout::draw(sf::RenderWindow& window) {
     Base::draw(window);
 
-    for (Base* object = firstChild; object != nullptr; object = object->next)
-    {
+    for (Base* object = firstChild; object != nullptr; object = object->next) {
+        if (object->isSelected) selected = object;
         object->draw(window);
     }
 }
 
-void Layout::onEvent(sf::Event& event)
-{
-    if (selected != nullptr)
-    {
+void Layout::onEvent(sf::Event& event) {
+    if (selected != nullptr) {
         selected->onEvent(event);
         switch (event.type)
         {
@@ -121,26 +80,24 @@ void Layout::onEvent(sf::Event& event)
     }
 }
 
-void Layout::onKeyPressed(sf::Event::KeyEvent& key)
-{
-    if (key.code == Controls["MoveUp"].first ||
-        key.code == Controls["MoveUp"].second ||
-        key.code == Controls["MoveRight"].first ||
-        key.code == Controls["MoveRight"].second)
+void Layout::onKeyPressed(sf::Event::KeyEvent& key) {
+    if (selected->next != nullptr && (key.code == Controls["MoveUp"].first ||
+                                      key.code == Controls["MoveUp"].second ||
+                                      key.code == Controls["MoveRight"].first ||
+                                      key.code == Controls["MoveRight"].second))
     {
-        selectNext();
+        setSelected(selected->next);
     }
 
-    else if (key.code == Controls["MoveDown"].first || 
-             key.code == Controls["MoveDown"].second ||
-             key.code == Controls["MoveLeft"].first ||
-             key.code == Controls["MoveLeft"].second)
+    else if (selected->previous != nullptr && (key.code == Controls["MoveDown"].first || 
+                                               key.code == Controls["MoveDown"].second ||
+                                               key.code == Controls["MoveLeft"].first ||
+                                               key.code == Controls["MoveLeft"].second))
     {
-        selectPrev();
+        setSelected(selected->previous);
     }
 }
 
-void Layout::onKeyReleased(sf::Event::KeyEvent& key)
-{
+void Layout::onKeyReleased(sf::Event::KeyEvent& key) {
 
 }

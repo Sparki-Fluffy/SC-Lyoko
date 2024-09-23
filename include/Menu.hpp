@@ -1,13 +1,11 @@
 #pragma once
 #include "Layout.hpp"
 
-enum MenuType : int
-{
+enum MenuType : int {
     VMenu = 0, HMenu
 };
 
-class Menu : public Layout
-{
+class Menu : public Layout {
     friend void to_json(nlohmann::json& j, const Menu& menu);
     friend void from_json(nlohmann::json j, Menu& menu);
 protected:
