@@ -17,9 +17,11 @@ add_library(logics STATIC ${SOURCE_LIB})
 
 include_directories(include)
 include_directories(SFML)
+include_directories(json/include)
 
 add_executable(SC-Lyoko ${SOURCE_EXE})
 
 add_subdirectory(SFML)
+add_subdirectory(json)
 
 target_link_libraries(SC-Lyoko logics SFML-GRAPHICS SFML-SYSTEM SFML-WINDOW)
