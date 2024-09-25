@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.28)
 
-project(SC-Lyoko LANGUAGES CXX)
+set(PROJECT_NAME SC-Lyoko)
+
+project(${PROJECT_NAME} LANGUAGES CXX)
 
 set(SOURCE_LIB	src/App.cpp
 				src/Base.cpp
@@ -19,9 +21,9 @@ include_directories(include)
 include_directories(SFML)
 include_directories(json/include)
 
-add_executable(SC-Lyoko ${SOURCE_EXE})
+add_executable(${PROJECT_NAME} ${SOURCE_EXE})
 
 add_subdirectory(SFML)
 add_subdirectory(json)
 
-target_link_libraries(SC-Lyoko logics SFML-GRAPHICS SFML-SYSTEM SFML-WINDOW)
+target_link_libraries(${PROJECT_NAME} logics SFML-GRAPHICS SFML-SYSTEM SFML-WINDOW)
