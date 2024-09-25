@@ -22,4 +22,4 @@ add_executable(SC-Lyoko ${SOURCE_EXE})
 
 add_subdirectory(SFML)
 
-target_link_libraries(SC-Lyoko logics SFML)
+target_link_libraries(SC-Lyoko logics SFML-GRAPHICS SFML-SYSTEM SFML-WINDOW)
