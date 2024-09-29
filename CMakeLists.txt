@@ -1,19 +1,16 @@
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 3.25)
 
 set(PROJECT_NAME SC-Lyoko)
 
 project(${PROJECT_NAME} LANGUAGES CXX)
 
-set(SOURCE_LIB	src/App.cpp
+set(SOURCE_EXE	src/main.cpp
+				src/App.cpp
 				src/Base.cpp
 				src/Button.cpp
 				src/Layout.cpp
 				src/Menu.cpp
 				src/Scene.cpp)
-
-set(SOURCE_EXE	src/main.cpp)
-
-add_library(logics STATIC ${SOURCE_LIB})
 
 include_directories(include)
 include_directories(SFML)
@@ -23,4 +20,4 @@ add_executable(${PROJECT_NAME} ${SOURCE_EXE})
 
 add_subdirectory(SFML)
 
-target_link_libraries(${PROJECT_NAME} logics sfml-system sfml-graphics sfml-window)
+target_link_libraries(${PROJECT_NAME} sfml-system sfml-graphics sfml-window)
